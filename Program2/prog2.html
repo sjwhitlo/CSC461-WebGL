@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Prog 2: Rasterization Shell Whitlock</title>
+            
+            <script type="text/javascript" src="gl-matrix-min.js"></script>
+            <script type="text/javascript" src="rasterize.js"></script>
+            </head>
+    
+    <body onload="main();">
+        <canvas id="myWebGLCanvas" width="512" height="512"></canvas>
+<!--         <canvas id="myWebGLCanvas" width="2000" height="2000"></canvas>-->
+
+        <br>
+        
+        <!-- Output to show current lighting model -->
+        <span>Current Lighting Model: <span id="txtLt">Error</span></span>
+        
+        <hr>
+        
+        <div  id="modSelected">
+            <!-- Table for model data -->
+            <table>
+                
+                <tr>
+                    <td id="eye_data" valign="top"> <!-- Position -->
+                        <table>
+                            <th colspan="2" align="left">Eye:</th>
+                            <tr> <!-- x -->
+                                <td>Location:</td>
+                                <td id="eye_pos">N/A</td>
+                            </tr>
+                            <tr> <!-- y -->
+                                <td>Center:</td>
+                                <td id="eye_center">N/A</td>
+                            </tr>
+                            <tr> <!-- z -->
+                                <td>Up:</td>
+                                <td id="eye_up">N/A</td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <td id="model_position" valign="top"> <!-- Position -->
+                        <table>
+                            <th colspan="2" align="left">Model:</th>
+                            <tr> <!-- x -->
+                                <td>x:</td>
+                                <td id="x_pos">N/A</td>
+                            </tr>
+                            <tr> <!-- y -->
+                                <td>y:</td>
+                                <td id="y_pos">N/A</td>
+                            </tr>
+                            <tr> <!-- z -->
+                                <td>z:</td>
+                                <td id="z_pos">N/A</td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <td id="model_lighting" valign="top"> <!-- Lighting -->
+                        <table>
+                            <th colspan="2" align="left">Lighting Weight:</th>
+                            <tr> <!-- amb -->
+                                <td>ambient:</td>
+                                <td id="amb_wt" align="right">N/A</td>
+                            </tr>
+                            <tr> <!-- diff -->
+                                <td>diffuse:</td>
+                                <td id="diff_wt" align="right">N/A</td>
+                            </tr>
+                            <tr> <!-- spec -->
+                                <td>specular:</td>
+                                <td id="spec_wt" align="right">N/A</td>
+                            </tr>
+                            <tr> <!-- n -->
+                                <td>n:</td>
+                                <td id="shine" align="right">N/A</td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
